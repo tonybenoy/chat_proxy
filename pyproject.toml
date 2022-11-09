@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "chat-proxy"
+version = "0.1.0"
+description = ""
+authors = ["Tony Benoy <me@tonybenoy.com>"]
+readme = "README.md"
+packages = [{include = "chat_proxy"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+tornado = "^6.2"
+httpx = "^0.23.0"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^0.990"
+black = "^22.10.0"
+isort = "^5.10.1"
+pre-commit = "^2.20.0"
+flake8 = "^5.0.4"
+pylint = "^2.15.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
