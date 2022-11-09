@@ -7,7 +7,8 @@ from src.constants import BODY_TEMPLATE, FAILED_RESPONSE, HEADERS, URL
 
 
 def get_bot_response(message: str) -> List[Dict[str, Any]]:
-    body = BODY_TEMPLATE.update(
+    body = BODY_TEMPLATE
+    body.update(
         {
             "message": message,
             "message_id": str(uuid.uuid4()),

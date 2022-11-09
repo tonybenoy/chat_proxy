@@ -8,7 +8,7 @@
             "name": "Python:Tornado Web server",
             "type": "python",
             "request": "launch",
-            "program": "chat_proxy/main.py",
+            "program": "src/main.py",
             "console": "integratedTerminal",
             "justMyCode": true
         }
