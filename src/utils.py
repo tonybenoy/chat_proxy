@@ -27,7 +27,6 @@ def get_bot_response(message: str) -> List[Dict[str, Any]]:
             return response.json()
     except httpx.HTTPError as exc:
         logger.error("Request failed: %s", exc)
-        print(exc)
         return []
 
 
