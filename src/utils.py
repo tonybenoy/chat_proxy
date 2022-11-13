@@ -4,7 +4,6 @@ from typing import Any, Dict, List
 import httpx
 
 from src.constants import BODY_TEMPLATE, FAILED_RESPONSE, HEADERS, URL
-from src.logger import logger
 
 
 def get_bot_response(message: str) -> List[Dict[str, Any]]:
@@ -26,7 +25,7 @@ def get_bot_response(message: str) -> List[Dict[str, Any]]:
             response.raise_for_status()
             return response.json()
     except httpx.HTTPError as exc:
-        logger.error("Request failed: %s", exc)
+        print(exc)
         return []
 
 

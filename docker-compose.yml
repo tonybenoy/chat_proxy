@@ -20,7 +20,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: registry.localhost:5000/chat_proxy
+    image: chat_proxy
     ports:
      - "8888:8888"
     command: "python3 /src/main.py"
